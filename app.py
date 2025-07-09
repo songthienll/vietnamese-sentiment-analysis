@@ -7,30 +7,24 @@ import os
 
 st.set_page_config(page_title="Phân tích cảm xúc món ăn Việt Nam", page_icon="🍜", layout="wide")
 
-
 # Load model và tokenizer
 @st.cache_resource
 def load_model_and_tokenizer():
-    model_path = 'sentiment_model'
+    repo_id = 'songthienll/phobert-model'
 
     try:
-        if not os.path.exists(model_path):
-            st.error(f"Model path does not exist: {model_path}")
-            return None, None
+        #Load tokenizer
+        tokenizer = AutoTokenizer.from_pretrained(repo_id)
 
-        # Load tokenizer
-        tokenizer = AutoTokenizer.from_pretrained(model_path)
-
-        # Load model
-        model = AutoModelForSequenceClassification.from_pretrained(model_path)
+        #Load model
+        model = AutoModelForSequenceClassification.from_pretrained(repo_id)
         model.eval()
 
         return tokenizer, model
-
+        
     except Exception as e:
         st.error(f"Error loading model: {str(e)}")
         return None, None
-
 
 # Tải stopwords và hàm loại bỏ stopwords
 @st.cache_data
@@ -42,7 +36,6 @@ def load_stopwords():
     except FileNotFoundError:
         st.warning("File vietnamese-stopwords.txt does not exist.")
         return set()
-
 
 # Load model, tokenizer và stopwords
 tokenizer, model = load_model_and_tokenizer()
@@ -80,13 +73,7 @@ def predict_sentiment(text):
         # Tiền xử lý văn bản
         processed_text = tokenizer_text(text)
         # Tokenize
-        inputs = tokenizer(
-            processed_text,
-            return_tensors="pt",
-            padding=True,
-            truncation=True,
-            max_length=256
-        )
+        inputs = tokenizer(processed_text, return_tensors="pt", padding=True, truncation=True, max_length=256)
         # Dự đoán
         with torch.no_grad():
             outputs = model(**inputs)
