@@ -131,4 +131,4 @@ Hãy thử nhập một câu như:
 - "Bánh mì này quá ngon!"  
 - "Cơm tấm hơi khô."  
 """)
-st.sidebar.image(r"assets\food.jpeg", caption="Món ăn Việt Nam", use_container_width=True)
+st.sidebar.image("https://raw.githubusercontent.com/songthienll/vietnamese-sentiment-analysis/main/assets/food.png", caption="Món ăn Việt Nam", use_container_width=True)
