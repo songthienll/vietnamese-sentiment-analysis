@@ -90,7 +90,7 @@ To run the application locally, follow these steps:
 - **Performance**: Achieves approximately 90% accuracy, with precision, recall, and F1-score of 0.90 for both classes (based on the test set evaluation).
 
 ## Dataset
-The dataset used for fine-tuning is sourced from ![Kaggle](https://www.kaggle.com/datasets/songthien/vietnamese-food-review-dataset), containing:
+The dataset used for fine-tuning is sourced from [Kaggle](https://www.kaggle.com/datasets/songthien/vietnamese-food-review-dataset), containing:
 - `train.csv`: 30,000 reviews.
 - `valid.csv`: 10,000 reviews.
 - `test.csv`: 10,000 reviews.
