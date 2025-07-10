@@ -80,8 +80,6 @@ To run the application locally, follow these steps:
    - Negative sentiment (😞) is displayed with a red message.
    - The confidence score is shown as a percentage.
 
-The interface features a clean design with a sidebar providing additional information and a sample image of Vietnamese food (`assets/food.jpeg`).
-
 ## Model Details
 - **Model**: PhoBERT (`songthienll/phobert-model`), fine-tuned for sentiment analysis on Vietnamese food reviews.
 - **Training Dataset**: The model was trained on a dataset of 50,000 reviews, split into training (30,000), validation (10,000), and test sets (10,000), with balanced labels (50% Positive, 50% Negative).
