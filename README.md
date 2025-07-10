@@ -5,9 +5,9 @@
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Features](#features)
+- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Demo](#demo)
 - [Model Details](#model-details)
 - [Dataset](#dataset)
 - [License](#license)
