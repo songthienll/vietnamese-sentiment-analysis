@@ -5,7 +5,7 @@ from pyvi.ViTokenizer import ViTokenizer
 import re
 import os
 
-st.set_page_config(page_title="Phân tích cảm xúc món ăn Việt Nam", page_icon="🍜", layout="wide")
+st.set_page_config(page_title="Phân tích cảm xúc món ăn", page_icon="🍜", layout="wide")
 
 # Load model và tokenizer
 @st.cache_resource
@@ -96,7 +96,7 @@ def predict_sentiment(text):
         return "Lỗi", 0.0
 
 # Giao diện Streamlit
-st.markdown("<h1 style='text-align: center; white-space: nowrap;'>🍜 Phân tích cảm xúc đánh giá món ăn Việt Nam</h1>",unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; white-space: nowrap;'>🍜 Phân tích cảm xúc đánh giá món ăn</h1>",unsafe_allow_html=True)
 st.markdown("Nhập đánh giá về món ăn để phân tích cảm xúc")
 st.markdown("---")
 
@@ -131,4 +131,4 @@ Hãy thử nhập một câu như:
 - "Bánh mì này quá ngon!"  
 - "Cơm tấm hơi khô."  
 """)
-st.sidebar.image("https://raw.githubusercontent.com/songthienll/vietnamese-sentiment-analysis/main/assets/food.jpeg", caption="Món ăn Việt Nam", use_container_width=True)
+st.sidebar.image("https://raw.githubusercontent.com/songthienll/vietnamese-sentiment-analysis/main/assets/food.jpeg", use_container_width=True)
