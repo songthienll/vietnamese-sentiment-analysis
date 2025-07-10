@@ -76,8 +76,8 @@ To run the application locally, follow these steps:
    Click the "Phân tích" button to get the sentiment prediction and confidence score.
 
 4. **View Results**:
-   - Positive sentiment (😊) is displayed with a green success message.
-   - Negative sentiment (😞) is displayed with a red error message.
+   - Positive sentiment (😊) is displayed with a green message.
+   - Negative sentiment (😞) is displayed with a red message.
    - The confidence score is shown as a percentage.
 
 The interface features a clean design with a sidebar providing additional information and a sample image of Vietnamese food (`assets/food.jpeg`).
